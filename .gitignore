@@ -23,4 +23,5 @@ Dockerfile.cross
 .idea
 *.swp
 *.swo
+*.tar
 *~

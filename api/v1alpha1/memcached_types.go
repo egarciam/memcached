@@ -48,9 +48,9 @@ type MemcachedSpec struct {
 	// Memcached.status.conditions.Message is a human readable message indicating details about the transition.
 	// For further information see: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties
 
-	// Conditions store the status conditions of the Memcached instances
-	// +operator-sdk:csv:customresourcedefinitions:type=status
-	Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`
+	// Port defines the port that will be used to init the container with the image
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	ContainerPort int32 `json:"containerPort,omitempty"`
 }
 
 // MemcachedStatus defines the observed state of Memcached
