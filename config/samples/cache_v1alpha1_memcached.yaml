@@ -10,5 +10,5 @@ metadata:
   name: memcached-sample
 spec:
   # TODO(user): Add fields here
-  size: 4
+  size: 5
   containerPort: 22122
